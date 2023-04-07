@@ -27,6 +27,7 @@ public class Util {
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
+
             } catch (SQLException | ClassNotFoundException e) {
                 throw new RuntimeException(e);
             }
@@ -34,7 +35,7 @@ public class Util {
         return connection;
     }
     public static SessionFactory getSessionFactory() {
-        if (sessionFactory == null); {
+        if (sessionFactory == null) {
             try {
                 Configuration configuration = new Configuration();
 
