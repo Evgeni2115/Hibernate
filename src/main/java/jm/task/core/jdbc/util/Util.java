@@ -60,7 +60,7 @@ public class Util {
                         .applySettings(configuration.getProperties()).build();
 
                 sessionFactory = configuration.buildSessionFactory(serviceRegistry);
-            } catch (HibernateException e){
+            } catch (HibernateException e) {
                 e.printStackTrace();
             }
         }
